@@ -243,26 +243,26 @@ export default function NumberGame() {
 
             {/* !completed ? ( */}
 
-            <div className="max-w-screen h-screen flex flex-col justify-center items-center bg-gradient-to-br from-cyan-100 to-slate-200">
+            <div className="max-w-screen h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[#BDD9BF] to-slate-200">
 
-                <div className="h-10/12 w-10/12 max-h-screen flex justify-center items-center bg-gradient-to-br from-[#974242] via- to-[#8e6f6f] rounded-xl shadow-2xl">
+                <div className="h-10/12 w-10/12 max-h-screen flex justify-center items-center bg-gradient-to-br from-[#36a489] via- to-[#BDD9BF] rounded-xl shadow-2xl">
 
 
 
 
                     {/* <button  className="absolute text-4xl font-bold text-teal-600 top-6 right-6 border-2 border-teal-600 px-3 rounded-full">I</button> */}
 
-                    <div className='w-2/3 p-10 bg-[#dddcdc] shadow-xl text-center grid col-span-1 content-evenly'>
+                    <div className='w-2/3 p-10 bg-[#f4f2f2] shadow-xl text-center grid col-span-1 content-evenly'>
 
                         {/* target number */}
                         {numArr.length >= 6 ?
                             <div className='relative'>
-                                <div className='h-1/3 w-fit bg-[#E29D65] opacity-80 mx-auto'>
+                                <div className='h-1/3 w-fit bg-[#FFC857] opacity-80 mx-auto'>
                                     <h1 className=" text-4xl font-bold text-[#292929] pb-2">TARGET</h1>
-                                    <h1 className="text-6xl font-bold text-teal-600 border border-teal-800 px-10 py-2">{target}</h1>
+                                    <h1 className="text-6xl font-bold text-[#524948] border border-teal-800 px-10 py-2">{target}</h1>
                                 </div>
                                 <div className='flex flex-col'>
-                                    <h2 className="text-5xl font-bold text-teal-600 absolute top-0 left-0 border border-teal-800 px-2 py-2 rounded-full">{seconds}</h2>
+                                    <h2 className="text-5xl font-bold text-[#524948] absolute top-0 left-0 border border-[#524948] px-2 py-2 rounded-full">{seconds}</h2>
 
                                 </div>
                             </div>
@@ -274,19 +274,19 @@ export default function NumberGame() {
                             <h2 className='mt-6 mb-2 text-2xl font-bold text-[#292929]'>Select your numbers:</h2>
                             <div className='w-full grid grid-rows-2 place-content-evenly'>
                                 <div className=' grid grid-cols-2 gap-10 content-evenly'>
-                                    <section onClick={generateHighNumber} className="bg-[#8d5a5a] text-xl text-white font-bold py-2 px-4 rounded hover:bg-[#587A68] transition duration-100"><p>Higher</p></section>
-                                    <section onClick={generateLowNumber} className=" text-xl text-white font-bold py-2 px-4 rounded bg-[#8d5a5a] hover:bg-[#587A68] transition duration-100"><p>Lower</p></section>
+                                    <section onClick={generateHighNumber} className="bg-[#36a489] text-xl text-white font-bold py-2 px-4 rounded hover:bg-[#587A68] transition duration-100"><p>Higher</p></section>
+                                    <section onClick={generateLowNumber} className=" text-xl text-white font-bold py-2 px-4 rounded bg-[#36a489] hover:bg-[#587A68] transition duration-100"><p>Lower</p></section>
                                 </div>
                                 <div className='grid grid-cols-6 mt-4 mb-2 gap-2 md:gap-4'>
                                     {numArr.slice(0, 6).map((num, index) => (
 
-                                        <section className="border border-teal-800 bg-teal-800 text-xl text-yellow-500 font-bold flex justify-center items-center py-2 px-4 rounded"><p>{num}</p></section>
+                                        <section className="border border-[#524948] bg-[#524948] text-xl text-[#FFC857] font-bold flex justify-center items-center py-2 px-4 rounded"><p>{num}</p></section>
                                     ))}
                                 </div>
 
                                 <div className='grid grid-cols-6 grid-rows-2 mt-4 mb-4 gap-2'>
                                     {subNumArr.slice(0, 12).map((num, index) => (
-                                        <section className="border border-yellow-500 bg-yellow-500 text-teal-800 text-xl font-bold flex justify-center items-center py-2 px-4 rounded"><p>{num}</p></section>
+                                        <section className="border border-[#AEFFD8] bg-[#FFC857] text-[#524948] text-xl font-bold flex justify-center items-center py-2 px-4 rounded"><p>{num}</p></section>
                                     ))}
                                 </div>
 
@@ -309,7 +309,7 @@ export default function NumberGame() {
                                                         id='numberButton'
                                                         disabled={false}
                                                         onClick={() => handleKeyPress(number)}
-                                                        className="bg-[#08605F] text-[#FAF2F0] text-bold text-xl p-2 rounded focus:scale-95 focus:bg-[#E29D65] transition duration-300 "
+                                                        className="bg-[#36a489] text-[#FAF2F0] text-bold text-xl p-2 rounded focus:scale-95 focus:bg-[#E29D65] transition duration-300 "
                                                     >
                                                         {number}
                                                     </button>
@@ -336,14 +336,14 @@ export default function NumberGame() {
                                                     <button
                                                         key={symbol}
                                                         onClick={() => handleMathSymbolClick(symbol)}
-                                                        className="bg-[#08605F] text-[#FAF2F0] text-2xl font-bold p-2 rounded focus:scale-95 focus:bg-[#E29D65] transition duration-300"
+                                                        className="bg-[#36a489] text-[#FAF2F0] text-2xl font-bold p-2 rounded focus:scale-95 focus:bg-[#E29D65] transition duration-300"
                                                     >
                                                         {symbol}
                                                     </button>
                                                 ))}
                                                 <button
                                                     onClick={() => validCheck()}
-                                                    className="bg-[#D85E65] text-white text-2xl p-2 rounded"
+                                                    className="bg-[#FFC857] border-2 border-[#524948] text-white text-5xl rounded"
                                                 >
                                                     =
                                                 </button>
@@ -362,11 +362,11 @@ export default function NumberGame() {
                             <div className="flex flex-col gap-4 justify-center items-center">
                                 <h1 className="text-4xl md:text-7xl font-bold text-teal-600 animate-pulse">YOU WIN</h1>
                                 <h1 className="text-2xl md:text-4xl font-bold text-[#292929]">Score: {score}</h1>
-                                <button onClick={handlePlayAgain} className="h-full bg-teal-600 text-white w-fit mx-auto font-bold py-2 px-4 rounded text-md hover:bg-teal-700 transition duration-200">Play Again</button>
+                                <button onClick={handlePlayAgain} className="h-full bg-[#FFC857] text-[#BDD9BF] w-fit mx-auto font-bold py-2 px-4 rounded text-md hover:bg-teal-700 transition duration-200">Play Again</button>
                             </div>
                         ) : (
                             <div className="flex flex-col gap-4 justify-center items-center">
-                                <button onClick={handlePlayAgain} className="h-full text-white w-fit mx-auto font-bold py-2 px-4 rounded text-md bg-[#8d5a5a] hover:bg-[#587A68] transition duration-200">Play Again</button>
+                                <button onClick={handlePlayAgain} className="h-full text-[#524948] w-fit mx-auto font-bold py-2 px-4 rounded text-md bg-[#FFC857] hover:bg-[#587A68] transition duration-200">Play Again</button>
                             </div>
                         )}
 
